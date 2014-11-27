@@ -1,0 +1,178 @@
+\documentclass[12pt]{report}
+
+%\usepackage{fullpage}
+\usepackage[margin=1.0in]{geometry}
+\usepackage{graphicx} 
+%\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
+\usepackage{gensymb}
+\usepackage[font={small}]{caption}
+\usepackage[font=small]{subcaption}
+% draft watermark
+%\usepackage{draftwatermark}
+%\SetWatermarkScale{5}
+%\SetWatermarkLightness{0.9}
+% bibliography things
+\usepackage[numbers,sort&compress]{natbib} 
+\usepackage[nottoc,numbib]{tocbibind}
+\usepackage{notoccite}
+% math things
+\usepackage{amsmath} 
+
+% special commands to be used in drafts for notes and annotations
+%\newcommand{\fix}[1]{\textbf{\color{red}{#1}}}
+%\newcommand{\rewrite}[1]{\textit{\color{blue}{#1}}}
+%\newcommand{\note}[1]{\textit{\color{red}{#1}}}
+%\newcommand{\del}[1]{\textit{\color{purple}{#1}}}
+% $$$$$$$    custom commands for the document $$$$$$$$$
+% prevent the following words from being hyphenated
+\hyphenation{CURRENT}
+% capitalize the following words in a special way
+\providecommand\Matlab{\textsc{MATLAB}}
+
+\begin{document}
+\begin{titlepage}
+\begin{center}
+\vspace{6cm}
+{\large \uppercase{Mechanism and Sensor Design for SUPERball, a Cable-Driven Tensegrity Robot} \\[1.0cm]}
+{By \\[0.5cm] \large Andrew P. Sabelhaus \\[1.5cm]}
+{A report submitted in partial satisfaction of the \\[0.4cm]
+requirements for the degree of \\[0.4cm]
+Masters of Science, Plan II \\[0.4cm]
+in \\[0.4cm]
+Mechanical Engineering \\[0.4cm]
+at the \\[0.4cm]
+University of California, Berkeley \\[1.5cm]}
+{Committee in charge: \\[1.5cm]
+\rule{10cm}{0.4pt} \\
+Professor Alice M. Agogino, Chair \\[1.5cm]
+\rule{10cm}{0.4pt}\\
+Professor Dennis Lieu}
+\vfill
+{\large Fall Semester 2014}
+\end{center}
+\end{titlepage}
+\begin{abstract}
+\thispagestyle{plain}
+\begin{center}
+Mechanical Design of Cable-Driven Tensegrity Robots \\
+by \\
+Andrew P. Sabelhaus\\
+Master of Science in Engineering -- Mechanical Engineering \\
+University of California, Berkeley \\
+Professor Alice M. Agogino, Chair
+\end{center}
+abstract material
+\pagenumbering{arabic}
+\end{abstract}
+\pagenumbering{roman}
+
+% ACKNOWLEDGEMENTS 
+\begin{center}
+\begin{minipage}{0.75\linewidth}
+\vspace{4cm}
+{\centering \textbf{Acknowledgments} \\[2cm] \par}
+Many, many thanks to Alice Agogino for her support, guidance, advice, and feedback on this report and all papers we have published together.
+Also, thanks to the entire team at NASA Ames Research Center and the Intelligent Robotics Group, in particular, Vytas SunSpiral and Adrian Agogino for their project vision and financial support.
+Thanks to Jonathan Bruce and Ken Caluwaerts, my partners in this project, without whom this mechanical design and manufacturing would not be possible.\\
+
+Thanks to the many Master of Engineering students, undergraduate researchers, and collaborators at NASA and UC Berkeley who have contributed significantly to aspects of this work, especially Sarah Dobi, Roya Firoozi, Yangxin Chen, Dizhou Lu, Margaret (Yuejia) Liu, Brian Tietz Mirletz, In Won Park, Stephen Goodwin, Kyle Morse, Jeffrey Friesen, and Kyunam Kim. \\
+
+Drew was supported by a National Science Foundation Graduate Research Fellowship, No. BLAH. Funding for the robot constructed in this report was provided by a NASA Innovative Advanced Concepts (NIAC) grant, No. BLAH.
+Thanks to the opportunities provided by the Fung Institute for Engineering Leadership at UC Berkeley, the Qualcomm Undergraduate Experience in Science and Technology, the NASA Space Technology Reserch Fellowship, the Idaho Space Grant, and the ReCare foundation for providing me with the opportunity to work with fabulous masters' students and undergraduate researchers that have contributed significantly to this report.
+\end{minipage}
+\end{center}
+\clearpage
+
+\tableofcontents
+%\listoffigures
+%\listoftables
+\clearpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Actual document begins
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\pagenumbering{arabic}
+%\linespread{1.5}
+%\doublespacing
+
+%\part{Background}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Introduction: overview of concept, organization of report
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter{Introduction}
+
+What this research is and what we seek to do. 
+Structure of this report.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Second Chapter: Motivation, Background, Prior Work, Research Goals
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter{Tensegrity Systems as Cable-Driven Robots}
+
+\section{Background}
+Challenges facing robots.
+Interacting with unknown terrain.
+Mass - lightweight structures better.
+Interacting with humans.
+Why do traditional robots not perform well at these tasks?
+
+\section{Motivation}
+Overcome these challenges with new ways of thinking about structures and the mechanisms that move them.
+This research seeks to apply traditional engineering materials and manufacturing processes to break free from the bonds of moment arm transfer and dangerous interactions.
+
+\section{Prior Work}
+
+\subsection{Tensegrity Structures}
+
+what is a tensegrity. 
+define terms. 
+Prior tensegrity work, both robotics and structural analysis.
+Dynamic Locomotion.
+
+\subsection{Space Robotics and Planetary Landers}
+
+Briefly discuss the goals of space landers.
+Story with Mars Curiosity, mass fraction, broken wheels, parachutes, etc.
+Titan as a valuable target that stakeholders (NASA) are willing to fund projects to make it there.
+
+\subsection{Cable-Driven Mechatronic Systems}
+This section hammers home the message of this report: I wanted to build a tensegrity system because it seemed like a novel methodology to address the motivation.
+However, in order to do this, I had to build a cable-driven system.
+Prior work was insufficient in some areas for our purposes: describe the prior things that people did for cable-driven robots.
+Address autonomy (others might not have to house their motors on the actual system).
+
+
+\section{Research Goals}
+Discuss the vision for SUPERball.
+Prototyping, proof of concept for dynamic locomotion.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Third Chapter: Engineering Requirements and starting up things for SUPERball
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter{Engineering Requirements for SUPERball}
+
+\section{Methodology for Creating Engineering Requirements}
+
+\section{Iterative Process}
+
+\chapter{Engineering Designs}
+
+\chapter{Testing}
+
+\chapter{Ongoing Work}
+
+
+\appendix
+\chapter{Additional Reference Material}
+
+
+\bibliographystyle{unsrtnat}
+%\bibliography{../bibTex/surfKinetics.bib}
+
+\end{document}
