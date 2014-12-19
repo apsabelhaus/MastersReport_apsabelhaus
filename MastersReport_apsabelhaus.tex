@@ -30,6 +30,7 @@
 \hyphenation{CURRENT}
 
 \begin{document}
+
 \begin{titlepage}
 \begin{center}
 \vspace{6cm}
@@ -51,6 +52,7 @@ Professor Dennis Lieu}
 {\large Fall Semester 2014}
 \end{center}
 \end{titlepage}
+
 \begin{abstract}
 \thispagestyle{plain}
 \begin{center}
@@ -123,7 +125,7 @@ The following section describes the system motivation, goals, and context of thi
   \begin{center}
   \vspace{-0.5cm}
     \includegraphics[width=0.53\textwidth]{img/superball_roverscape2_cropped.jpg}
-    \caption{SUPERball, fully assembled, in the NASA Ames Research Center Roverscape.}
+    \caption{SUPERball, fully assembled, in the NASA Ames Research Center Roverscape. Picture by Jonathan Bruce.~\cite{sabelhaus2015system}}
     \label{fig:overview}
   \end{center}
   \vspace{-0.7cm}
@@ -272,7 +274,7 @@ These research goals are all addressed in the following sections, and although m
 \chapter{Engineering Requirements and Component Specifications for SUPERball}
 
 At the time of this work, the task of developing sound design requirements for a full tensegrity robotic system which can achieve dynamic locomotion does not have a generally-accepted solution within the engineering community.
-Most common design practices rely on models to transform engineering requirements into engineering specifications and specific component parameters~\cite{dieter2009engineering}; however, tensegrity robots such as SUPERball have relied on non-model-based machine learning methods for generating trajectories.
+Most common design practices rely on models to transform engineering requirements into engineering specifications and specific component parameters~\cite{dieter2008engineering}; however, tensegrity robots such as SUPERball have relied on non-model-based machine learning methods for generating trajectories.
 Since the primary goal of SUPERball was to show proof-of-concept that dynamic rolling locomotion is possible for this type of robot, the space of possible engineering requirements was vast: it is very possible for a variety of system configurations to be controlled to roll.
 Thus, SUPERball is in a sense a controls-defined mechanical system: our engineering characteristics come from an iterative process of machine learning simulations paired with choices of discrete engineering components.
 With the assistance of NASA's machine learning experts, this process was iterated over until a solution was found where the capabilities of engineering components matched the robot's simulated parameters.
@@ -281,7 +283,7 @@ Figure \ref{fig:design_process} and later sections explore this process of requi
 \begin{figure}[thpb]
       \centering
       \includegraphics[width=0.9\columnwidth]{img/fig_rolling.pdf}
-      \caption{A simulation of SUPERball in the NASA Tensegrity Robotics Toolkit, showing a machine-learned trajectory with fast dynamic rolling motion.}
+      \caption{A simulation of SUPERball in the NASA Tensegrity Robotics Toolkit, showing a machine-learned trajectory with fast dynamic rolling motion. Figure by Atil Iscen.~\cite{NIACfinalreport}}
       \label{fig:superball_rolling_ntrt}
       \vspace{-0.2cm}
 \end{figure}
@@ -443,7 +445,7 @@ All of this high-level design work was collaborative between myself, Jonathan Br
 \begin{figure}[thpb]
       \centering
       \includegraphics[width=0.9\columnwidth]{img/strut.png}
-      \caption{Design v1.0 of a SUPERball endcap (and strut tube.) Note the four subsystems placed along the endcap, as well as the lack of detailed designs for mechanisms.}
+      \caption{Design v1.0 of a SUPERball endcap (and strut tube.) Note the four subsystems placed along the endcap, as well as the lack of detailed designs for mechanisms. Figure by Ken Caluwaerts.~\cite{bruce2014design,sabelhaus2014hardware}}
       \label{fig:strutrender}
       \vspace{-0.2cm}
 \end{figure}
@@ -455,7 +457,7 @@ This render comes from a that early CAD model, and though a hardware version of 
 \begin{figure}[thpb]
       \centering
       \includegraphics[width=0.9\columnwidth]{img/subsystem_end-cap_cropped.jpg}
-      \caption{Version 1.5 prototype design of one of SUPERball's endcaps. Most structural components were implemented with sheet metal, and the actuator assembly includes updated mechanisms for the cable-spring system.}
+      \caption{Version 1.5 prototype design of one of SUPERball's endcaps. Most structural components were implemented with sheet metal, and the actuator assembly includes updated mechanisms for the cable-spring system.~\cite{sabelhaus2014hardware}}
       \label{fig:strut_prototype}
       \vspace{-0.2cm}
 \end{figure}
@@ -473,7 +475,7 @@ This render comes from a that early CAD model, and though a hardware version of 
     \caption{Reverse side of the v1.6 endcap. This side shows the other PCB for motor control, and a better view of the actuator assembly and spool caps.}
     \label{fig:final_endcap_reverse}
   \end{subfigure}
-  \caption{Revision v1.6 of SUPERball's endcap.}
+  \caption{Revision v1.6 of SUPERball's endcap.~\cite{sabelhaus2015system}}
   \label{fig:final_endcap}
 \end{figure*}
 
@@ -500,7 +502,7 @@ However, as described in the sections below, the detail design phase for SUPERba
 In SUPERball, the tensile elements are called \emph{spring-cable assemblies} and consist of a combination of steel wire cable, Vectran cable, a compression spring, sensors and optionally an actuator.
 Figure~\ref{fig:springcable} shows the conceptual model of such a system, as originally envisioned by the collaborative team of myself, Jonathan Bruce, and Ken Caluwaerts.
 Each of SUPERball's motors is attached to a $1.4mm$-diameter Vectran cable (Cortland 7012 Vectran HT, $2.2kN$ breaking strength).
-Sensors and actuators are discussed in later sections of this report.
+Sensors and actuators are discussed in later in this report.
 
 \begin{figure}[thpb]
       \centering
@@ -512,6 +514,7 @@ Only the cables are exposed to the environment as all sensors and actuators are 
 The dashed elements - motor \& torque sensor - are available on actuated spring-cable assemblies.
 The remote cable tension $f$ on end cap $i$ is only available to the motor controller on end cap $j$ through a wireless link.
 Motor-side torque sensing $\tau$ allows for local tension control on end cap $j$.
+Figure by Ken Caluwaerts.~\cite{sabelhaus2015system}
 }
       \label{fig:springcable}
 \end{figure}
@@ -524,7 +527,7 @@ Though high-level design was collaborative, these newest mechanisms themselves a
 \begin{figure}[thpb]
       \centering
       \includegraphics[width=.5\columnwidth]{img/cable_pulley_bearing_labelled.jpg}
-      \caption{Internal view of the pulley and exit point of the steel cable, which connects to springs inside the strut tube on one end and to the external vectran cables on the other.}
+      \caption{Internal view of the pulley and exit point of the steel cable, which connects to springs inside the strut tube on one end and to the external vectran cables on the other.~\cite{sabelhaus2015system}}
       \label{fig:cable_pulley_bearing_internals}
       \vspace{-0.2cm}
 \end{figure}
@@ -540,7 +543,7 @@ The passive spring has a much higher compressive range to allow for pretension t
 \begin{figure}[thpb]
       \centering
       \includegraphics[width=.5\columnwidth]{img/double_spring_series_6-9-14.jpg}
-      \caption{Compression spring movement on v1.0 of a SUPERball rod. This motion is largely unchanged in later versions, though the cable routing has been updated significantly as described above.}
+      \caption{Compression spring movement on v1.0 of a SUPERball rod. This motion is largely unchanged in later versions, though the cable routing has been updated significantly as described above. Figure by Jonathan Bruce.~\cite{bruce2014design}}
       \label{fig:spring_series}
       \vspace{-0.2cm}
 \end{figure}
@@ -561,7 +564,7 @@ Figure \ref{fig:redesigned_shaft_collar} shows a perspective image of this compo
   \vspace{-0.7cm}
   \begin{center}
     \includegraphics[width=0.33\textwidth]{img/redesigned_shaft_collar}
-    \caption{Shaft collar for SUPERball.}
+    \caption{Shaft collar for SUPERball.~\cite{sabelhaus2014hardware}}
     \label{fig:redesigned_shaft_collar}
   \end{center}
   \vspace{-1.0cm}
@@ -578,7 +581,7 @@ The power subsystem consists of three main sets of components: a large lithium p
 \begin{wrapfigure}{R}{0.45\columnwidth}
    \centering
    \includegraphics[width=0.45\columnwidth]{img/battery_compartment} 
-   \caption{SUPERball's power subsystem structural housing (battery compartment.) Right: Original v1.0 design. Left: Redesigned compartment for v1.5 and 1.6.}
+   \caption{SUPERball's power subsystem structural housing (battery compartment.) Right: Original v1.0 design. Left: Redesigned compartment for v1.5 and 1.6.~\cite{sabelhaus2014hardware}}
    \label{battery_compartment}
 %%   \vspace{-0.5cm}
 \end{wrapfigure}
@@ -609,7 +612,7 @@ These same radii were used in the most recent version of the sheet metal bracket
    \vspace{-0.5cm}
    \centering
    \includegraphics[width=0.33\columnwidth]{img/spindle} 
-   \caption{SUPERball's motor/cable spindle with vectran cable looped through.}
+   \caption{SUPERball's motor/cable spindle with vectran cable looped through.~\cite{sabelhaus2014hardware}}
    \label{spindle_pic}
    \vspace{-0.6cm}
 \end{wrapfigure}
@@ -655,7 +658,7 @@ It has been successfully used in space applications (e.g., the Mars Pathfinder a
 A POM spindle mounted onto the motor axis actuates a Vectran cable. 
 This open construction exposes the wire and spindle, but reduces the cable friction and risk of knots.
 The design is shown without the bottom spool cap so that the motor mount sensor is exposed for viewing.
-The flanges of the bottom spool cap (which carry the entire load from the top of the rod end) would be situated between the white nylon spacers and the motor mount.}
+The flanges of the bottom spool cap (which carry the entire load from the top of the rod end) would be situated between the white nylon spacers and the motor mount.~\cite{sabelhaus2014hardware}}
    \label{actuation_open_view}
    \vspace{-0.2cm}
 \end{wrapfigure}
@@ -859,7 +862,7 @@ Compared against a maximum worst-case load of $800N$ from above, this bracket ha
 \begin{figure}[thbt]
   \begin{center}
     \includegraphics[width=0.75\textwidth]{./img/battery_compartment_compression_test_edited.jpg}
-    \caption{FEA Test of the battery compartment, with 800N load and bonded contact surfaces.}
+    \caption{FEA Test of the battery compartment, with 800N load and bonded contact surfaces.~\cite{sabelhaus2014hardware}}
     \label{battery_compartment_FEA}
   \end{center}
 \end{figure}
@@ -867,7 +870,7 @@ Compared against a maximum worst-case load of $800N$ from above, this bracket ha
 \begin{wrapfigure}{R}{0.4\columnwidth}
    \centering
    \includegraphics[width=0.4\columnwidth]{img/endcap_shaft_collar_compression_test_800N_edited.jpg} 
-   \caption{FEA test of the end-cap shaft collar.}
+   \caption{FEA test of the end-cap shaft collar.~\cite{sabelhaus2014hardware}}
    \label{endcap_shaft_collar_FEA}
 %%   \vspace{-0.5cm}
 \end{wrapfigure}
@@ -909,7 +912,7 @@ Note that a bending test in FEA is not included in these results due to failures
 \begin{wrapfigure}{r}{0.4\columnwidth}
    \centering
    \includegraphics[width=0.4\columnwidth]{img/bottom_spool_cap_compression_test_edited.jpg} 
-   \caption{FEA test of the bottom spool cap part.}
+   \caption{FEA test of the bottom spool cap part.~\cite{sabelhaus2014hardware}}
    \label{bottom_spool_cap_100N}
 %%   \vspace{-0.5cm}
 \end{wrapfigure}
@@ -945,12 +948,12 @@ Thus, a future redesign of these flanges would be required if such large forces 
   \begin{center}
     \begin{subfigure}[b]{0.45\textwidth}
       \includegraphics[width=1\textwidth]{./img/compression_test.jpg}
-      \caption{Compression test setup for end-cap prototype.}
+      \caption{Compression test setup for end-cap prototype.~\cite{sabelhaus2014hardware}}
       \label{endcap_compression_test_experimental}
     \end{subfigure}
     \begin{subfigure}[b]{0.45\textwidth}
       \includegraphics[width=1\textwidth]{./img/bending_test.jpg}
-      \caption{Bending test setup for end-cap prototype.}
+      \caption{Bending test setup for end-cap prototype.~\cite{sabelhaus2014hardware}}
       \label{endcap_bending_test_experimental}
     \end{subfigure}
   \end{center}
@@ -1082,7 +1085,7 @@ Calibration curves are not shown here, since these were generated by Jonathan Br
 \begin{wrapfigure}{R}{0.50\columnwidth}
       \centering
       \includegraphics[width=0.50\columnwidth]{img/Force_Time_Graph_adjusted.eps}
-      \caption{Motor mount torque sensor data recorded during a square wave input position trajectory for a motor. A square wave of tension is sensed, detecting the commanded position trajectory up to a calibration constant, showing the validity of SUPERball's torque sensors.}
+      \caption{Motor mount torque sensor data recorded during a square wave input position trajectory for a motor. A square wave of tension is sensed, detecting the commanded position trajectory up to a calibration constant, showing the validity of SUPERball's torque sensors. Figure by Jonathan Bruce.~\cite{sabelhaus2015system}}
       \label{fig:sensor1data}
       \vspace{-0.4cm}
 \end{wrapfigure}
@@ -1106,7 +1109,7 @@ This graph matches the actuated square wave reasonably well, although noise and 
 \begin{figure}[thbp]
     \centering
     \includegraphics[width=1\linewidth]{img/superball_flop_combined.jpg}
-    \caption{SUPERball performing a single \emph{punctuated roll} or face-change movement. The robot starts on one triangular face, and after locomoting forward, stands on a different triangular face.}
+    \caption{SUPERball performing a single \emph{punctuated roll} or face-change movement. The robot starts on one triangular face, and after locomoting forward, stands on a different triangular face.~\cite{sabelhaus2015system}}
     \label{fig:superball_flop_flat}
 \end{figure}
 
@@ -1201,3 +1204,4 @@ Filling in these values into the above equations results in the information spec
 
 \end{document}
 
+% to-do: cite figures I didn't make, e.g. Ken's diagrams, and the papers they came from.
